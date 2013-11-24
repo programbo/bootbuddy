@@ -2,12 +2,13 @@
 
 angular.module('bootbuddyApp', [
   'ngCookies',
-  'ngSanitize'
+  'ngSanitize',
+  'ui.router'
 ])
-  .config ($routeProvider) ->
-    $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
-      .otherwise
-        redirectTo: '/'
+  .config ($stateProvider, $urlRouterProvider) ->
+    $urlRouterProvider.otherwise '/home'
+    $stateProvider
+      .state('home',
+        url: '/home'
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl')
