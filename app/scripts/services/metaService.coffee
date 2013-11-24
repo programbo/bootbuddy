@@ -6,6 +6,12 @@ angular.module('bootbuddyApp')
 
     {
       setContent: (name, content) ->
-        metaTag = angular.element $document.find("meta[name=#{name}]")[0]
-        metaTag.attr 'content', content
+        metaTag = $document.find("meta[name='#{name}']")
+        if metaTag.length > 0
+          metaTag.attr 'content', content
+        else
+          metaTag = angular.element "<meta name='#{name}' content='#{content}'></meta>"
+          angular.element('head').append metaTag
+
+        metaTag
     }

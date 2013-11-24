@@ -1,12 +1,18 @@
 'use strict'
 
 angular.module('bootbuddyApp')
-  .factory 'titleService', () ->
+  .factory 'titleService', ($document) ->
     # Service logic
-    suffix = title = ""
+    prefix = suffix = title = ""
 
     # Public API here
     {
+      setPrefix: ( p ) ->
+        prefix = p
+
+      getPrefix: () ->
+        prefix
+
       setSuffix: ( s ) ->
         suffix = s
 
@@ -14,10 +20,7 @@ angular.module('bootbuddyApp')
         suffix
 
       setTitle: ( t ) ->
-        if suffix isnt ""
-          title = t + suffix
-        else
-          title = t
+        title = "#{prefix}#{t}#{suffix}"
 
         $document.prop 'title', title
 
