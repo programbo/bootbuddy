@@ -1,6 +1,27 @@
 {
   "name": "bootbuddy",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Plan and organise your fitness training sessions.",
+  "main": "app.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/programbo/bootbuddy.git"
+  },
+  "keywords": [
+    "bootbuddy",
+    "bootcamp",
+    "fitness",
+    "planning"
+  ],
+  "author": "John Lombardo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/programbo/bootbuddy/issues"
+  },
+  "homepage": "https://github.com/programbo/bootbuddy",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
