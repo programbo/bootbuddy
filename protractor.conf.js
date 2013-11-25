@@ -62,14 +62,19 @@ exports.config = {
   // and
   // https://code.google.com/p/selenium/source/browse/javascript/webdriver/capabilities.js
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'phantomjs',
+    'phantomjs': {
+      'cli': {
+        'args': ['web-security=false']
+      }
+    }
   },
 
   // ----- More information for your tests ----
   //
   // A base URL for your application under test. Calls to protractor.get()
   // with relative paths will be prepended with this.
-  baseUrl: 'http://localhost:9000',
+    baseUrl: 'http://locahost:9000',
 
   // Selector for the element housing the angular app - this defaults to
   // body, but is necessary if ng-app is on a descendant of <body>
