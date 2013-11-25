@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('bootbuddyApp')
-  .controller 'MainCtrl', ($scope, titleService, $timeout) ->
+  .controller 'MainCtrl', ($scope, TitleService, $timeout) ->
     $scope.awesomeThings = [
       'HTML5 Boilerplate'
       'AngularJS'
@@ -9,4 +9,4 @@ angular.module('bootbuddyApp')
     ]
 
     $scope.doSomething = ->
-      $timeout -> titleService.setTitle 'Splendid!'
+      $timeout -> TitleService.setTitle 'Splendid!'

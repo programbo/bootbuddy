@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('bootbuddyApp')
-  .factory 'titleService', ($document) ->
+  .factory 'TitleService', ($document) ->
     # Service logic
     prefix = suffix = title = ""
 

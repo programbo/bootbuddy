@@ -1,9 +1,7 @@
 'use strict'
 
 angular.module('bootbuddyApp')
-
-  .factory 'metaService', ($document) ->
-
+  .factory 'MetaService', ($document) ->
     {
       setContent: (name, content) ->
         metaTag = $document.find("meta[name='#{name}']")
